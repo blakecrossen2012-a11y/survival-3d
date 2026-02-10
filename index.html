@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Survival Multiplayer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      font-family: monospace;
+    }
+
+    #hud {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      color: white;
+      z-index: 10;
+      line-height: 1.4;
+    }
+
+    #chatInput {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 320px;
+      padding: 6px;
+      font-family: monospace;
+      z-index: 10;
+      outline: none;
+    }
+
+    #chatLog {
+      position: fixed;
+      bottom: 45px;
+      left: 10px;
+      width: 320px;
+      max-height: 200px;
+      overflow-y: auto;
+      color: white;
+      font-size: 13px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="hud">Connecting...</div>
+  <div id="chatLog"></div>
+  <input id="chatInput" placeholder="Enter chat (use /t for team)" />
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
